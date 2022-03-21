@@ -19,6 +19,15 @@ software =
 		{
 			filename = "u-boot.bin";
 			device = "/dev/bootloader";
+		},
+		{
+			filename = "recovery.img";
+			device = "/dev/recovery";
+		},
+		{
+			filename = "vendor.ext4.img2simg";
+			device = "/dev/vendor";
+			type = "ext4";
 		}
 	);
 	scripts: (
