@@ -1,0 +1,38 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	images: (
+		{
+			filename = "rootfs.ubifs";
+			volume = "rootfs";
+		}
+		{
+			filename = "dtb.img";
+			device = "/dev/dtb";
+		},
+		{
+			filename = "boot.img.encrypt";
+			device = "/dev/mtd5";
+			type = "flash";
+		},
+		{
+			filename = "u-boot.bin.aml.encrypt";
+			device = "/dev/mtd0";
+			offset = "1792K";
+			type = "flash";
+		}
+	);
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
