@@ -5,7 +5,7 @@ software =
 	images: (
 		{
 			filename = "rootfs.ubifs";
-			volume = "rootfs";
+			volume = "system";
 		},
 		{
 			filename = "dtb.img";
@@ -13,54 +13,32 @@ software =
 		},
 		{
 			filename = "boot.img";
-			device = "/dev/mtd5";
+			device = "/dev/mtd10";
 			type = "flash";
 		},
 		{
-			filename = "u-boot.bin.usb.bl2";
-			device = "/dev/mtd0";
-			type = "flash";
-		},
-		{
-			filename = "u-boot.bin.usb.bl2";
-			device = "/dev/mtd0";
-			offset = "512K";
-			type = "flash";
-		},
-		{
-			filename = "u-boot.bin.usb.bl2";
-			device = "/dev/mtd0";
-			offset = "1024K";
-			type = "flash";
-		},
-		{
-			filename = "u-boot.bin.usb.bl2";
-			device = "/dev/mtd0";
-			offset = "1536K";
-			type = "flash";
-		},
-		{
-			filename = "u-boot.bin.usb.tpl";
+			filename = "blob-bl2e.sto.bin.signed";
 			device = "/dev/mtd1";
 			type = "flash";
 		},
 		{
-			filename = "u-boot.bin.usb.tpl";
-			device = "/dev/mtd1";
-			offset = "2M";
+			filename = "blob-bl2x.bin.signed";
+			device = "/dev/mtd2";
 			type = "flash";
 		},
 		{
-			filename = "u-boot.bin.usb.tpl";
-			device = "/dev/mtd1";
-			offset = "4M";
+			filename = "ddr-fip.bin";
+			device = "/dev/mtd3";
 			type = "flash";
 		},
 		{
-			filename = "u-boot.bin.usb.tpl";
-			device = "/dev/mtd1";
-			offset = "6M";
+			filename = "device-fip.bin.signed";
+			device = "/dev/mtd4";
 			type = "flash";
+		},
+		{
+			filename = "vendor.ubifs";
+			volume = "vendor";
 		}
 	);
 	scripts: (
