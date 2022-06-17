@@ -1,0 +1,47 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	boardname = {
+		images: (
+			{
+				filename = "rootfs.ext4.img2simg";
+				device = "/dev/system";
+				type = "ext4";
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/boot";
+			},
+			{
+				filename = "u-boot.bin.signed";
+				device = "/dev/bootloader";
+			},
+			{
+				filename = "recovery.img";
+				device = "/dev/recovery";
+			},
+			{
+				filename = "vendor.ext4.img2simg";
+				device = "/dev/vendor";
+				type = "ext4";
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
