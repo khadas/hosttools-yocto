@@ -17,6 +17,11 @@ software =
 			type = "flash";
 		},
 		{
+			filename = "bb1st.sto.bin.signed";
+			device = "/dev/mtd0";
+			type = "flash";
+		},
+		{
 			filename = "blob-bl2e.sto.bin.signed";
 			device = "/dev/mtd1";
 			type = "flash";
