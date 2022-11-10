@@ -1,0 +1,65 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	boardname = {
+		images: (
+			{
+				filename = "rootfs.squashfs";
+				device = "/dev/mtd11";
+				type = "flash";
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/mtd10";
+				type = "flash";
+			},
+			{
+				filename = "bb1st.sto.bin.signed";
+				device = "/dev/mtd0";
+				type = "flash";
+			},
+			{
+				filename = "blob-bl2e.sto.bin.signed";
+				device = "/dev/mtd1";
+				type = "flash";
+			},
+			{
+				filename = "blob-bl2x.bin.signed";
+				device = "/dev/mtd2";
+				type = "flash";
+			},
+			{
+				filename = "ddr-fip.bin";
+				device = "/dev/mtd3";
+				type = "flash";
+			},
+			{
+				filename = "device-fip.bin.signed";
+				device = "/dev/mtd4";
+				type = "flash";
+			},
+			{
+				filename = "vendor.squashfs";
+				device = "/dev/mtd12";
+				type = "flash";
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}

@@ -1,0 +1,3 @@
+# ota package file list for nand
+HASH_FILES="bb1st.sto.bin.signed blob-bl2e.sto.bin.signed blob-bl2x.bin.signed ddr-fip.bin device-fip.bin.signed dtb.img boot.img rootfs.squashfs vendor.squashfs update.sh"
+FILES="sw-description sw-description.sig bb1st.sto.bin.signed blob-bl2e.sto.bin.signed blob-bl2x.bin.signed ddr-fip.bin device-fip.bin.signed dtb.img boot.img rootfs.squashfs vendor.squashfs update.sh"
