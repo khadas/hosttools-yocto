@@ -7,6 +7,7 @@ software =
 			{
 				filename = "rootfs.ubifs";
 				volume = "system";
+				installed-directly = true;
 			},
 			{
 				filename = "dtb.img";
@@ -45,6 +46,7 @@ software =
 			{
 				filename = "vendor.ubifs";
 				volume = "vendor";
+				installed-directly = true;
 			}
 		);
 	}
