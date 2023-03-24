@@ -18,10 +18,6 @@ software =
 				device = "/dev/boot";
 			},
 			{
-				filename = "u-boot.bin.signed";
-				device = "/dev/bootloader";
-			},
-			{
 				filename = "recovery.img";
 				device = "/dev/recovery";
 			},
