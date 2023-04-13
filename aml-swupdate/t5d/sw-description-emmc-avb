@@ -5,17 +5,20 @@ software =
 	boardname = {
 		images: (
 			{
-				filename = "rootfs.ext4.img2simg";
+				filename = "rootfs.ext4.gz";
 				device = "/dev/system";
-				type = "ext4";
+				compressed = "zlib";
+				installed-directly = true;
 			},
 			{
 				filename = "dtb.img";
 				device = "/dev/dtb";
+				installed-directly = true;
 			},
 			{
 				filename = "boot.img";
 				device = "/dev/boot";
+				installed-directly = true;
 			},
 			{
 				filename = "u-boot.bin";
@@ -24,15 +27,18 @@ software =
 			{
 				filename = "recovery.img";
 				device = "/dev/recovery";
+				installed-directly = true;
 			},
 			{
-				filename = "vendor.ext4.img2simg";
+				filename = "vendor.ext4.gz";
 				device = "/dev/vendor";
-				type = "ext4";
+				compressed = "zlib";
+				installed-directly = true;
 			},
 			{
 				filename = "vbmeta.img";
 				device = "/dev/vbmeta";
+				installed-directly = true;
 			}
 		);
 	}
