@@ -1,0 +1,51 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	boardname = {
+		images: (
+			{
+				filename = "rootfs.ext4.img2simg";
+				device = "/dev/system";
+				type = "ext4";
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/boot";
+			},
+			{
+				filename = "u-boot.bin.signed";
+				device = "/dev/bootloader";
+			},
+			{
+				filename = "recovery.img";
+				device = "/dev/recovery";
+			},
+			{
+				filename = "vendor-image-mesong12b-w400-5.15.ext4";
+				device = "/dev/vendor";
+				type = "ext4";
+			},
+			{
+				filename = "vbmeta.img";
+				device = "/dev/vbmeta";
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
