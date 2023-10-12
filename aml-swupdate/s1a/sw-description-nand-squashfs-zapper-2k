@@ -17,21 +17,29 @@ software =
 			{
 				filename = "bb1st.sto.bin.signed";
 				device = "/dev/mtd0";
+				offsetaddress = "512K";
+				backuptimes = 4;
 				type = "flash";
 			},
 			{
 				filename = "blob-bl2e.sto.bin.signed";
 				device = "/dev/mtd1";
+				offsetaddress = "128K";
+				backuptimes = 4;
 				type = "flash";
 			},
 			{
 				filename = "blob-bl2x.bin.signed";
 				device = "/dev/mtd2";
+				offsetaddress = "128K";
+				backuptimes = 4;
 				type = "flash";
 			},
 			{
 				filename = "device-fip.bin.signed";
 				device = "/dev/mtd3";
+				offsetaddress = "2M";
+				backuptimes = 2;
 				type = "flash";
 			},
 		);

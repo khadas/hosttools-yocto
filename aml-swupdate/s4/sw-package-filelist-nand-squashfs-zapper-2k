@@ -1,3 +1,0 @@
-# ota package file list for zapper 2k
-HASH_FILES="bb1st.sto.bin.signed blob-bl2e.sto.bin.signed blob-bl2x.bin.signed device-fip.bin.signed boot.img rootfs.squashfs update.sh"
-FILES="sw-description sw-description.sig bb1st.sto.bin.signed blob-bl2e.sto.bin.signed blob-bl2x.bin.signed device-fip.bin.signed boot.img rootfs.squashfs update.sh"
