@@ -1,0 +1,37 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	AV400 = {
+		images: (
+			{
+				filename = "rootfs.squashfs";
+				device = "/dev/system";
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/boot";
+			},
+			{
+				filename = "u-boot.bin.signed";
+				device = "/dev/bootloader";
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
