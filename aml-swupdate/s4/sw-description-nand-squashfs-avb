@@ -5,7 +5,7 @@ software =
 	boardname = {
 		images: (
 			{
-				filename = "rootfs.squashfs";
+				filename = "rootfs.img";
 				device = "/dev/mtd11";
 				type = "flash";
 			},
@@ -54,7 +54,7 @@ software =
 				type = "flash";
 			},
 			{
-				filename = "vendor.squashfs";
+				filename = "vendor.img";
 				device = "/dev/mtd12";
 				type = "flash";
 			},
