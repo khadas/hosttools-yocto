@@ -1,0 +1,75 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	boardname = {
+		images: (
+			{
+				filename = "rootfs.ubifs";
+				volume = "system";
+				installed-directly = true;
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/mtd10";
+				type = "flash";
+			},
+			{
+				filename = "bb1st.sto.bin.signed";
+				device = "/dev/mtd0";
+				offsetaddress = "512K";
+				backuptimes = 8;
+				type = "flash";
+			},
+			{
+				filename = "blob-bl2e.sto.bin.signed";
+				device = "/dev/mtd1";
+				offsetaddress = "256K";
+				backuptimes = 8;
+				type = "flash";
+			},
+			{
+				filename = "blob-bl2x.bin.signed";
+				device = "/dev/mtd2";
+				offsetaddress = "256K";
+				backuptimes = 8;
+				type = "flash";
+			},
+			{
+				filename = "ddr-fip.bin";
+				device = "/dev/mtd3";
+				offsetaddress = "256K";
+				backuptimes = 8;
+				type = "flash";
+			},
+			{
+				filename = "device-fip.bin.signed";
+				device = "/dev/mtd4";
+				offsetaddress = "3M";
+				backuptimes = 4;
+				type = "flash";
+			},
+			{
+				filename = "vendor.ubifs";
+				volume = "vendor";
+				installed-directly = true;
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
