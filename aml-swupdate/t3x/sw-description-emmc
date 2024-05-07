@@ -1,0 +1,52 @@
+software =
+{
+	version = "1.0.1";
+	hardware-compatibility: [ "1.0" ];
+	boardname = {
+		images: (
+			{
+				filename = "rootfs.ext4.gz";
+				device = "/dev/system";
+				compressed = "zlib";
+				installed-directly = true;
+			},
+			{
+				filename = "dtb.img";
+				device = "/dev/dtb";
+				installed-directly = true;
+			},
+			{
+				filename = "boot.img";
+				device = "/dev/boot";
+				installed-directly = true;
+			},
+			{
+				filename = "u-boot.bin";
+				device = "/dev/bootloader";
+			},
+			{
+				filename = "recovery.img";
+				device = "/dev/recovery";
+				installed-directly = true;
+			},
+			{
+				filename = "vendor.ext4.gz";
+				device = "/dev/vendor";
+				compressed = "zlib";
+				installed-directly = true;
+			}
+		);
+	}
+	scripts: (
+		{
+			filename = "update.sh";
+			type = "shellscript";
+		}
+	);
+	uboot: (
+		{
+			name = "upgrade_step";
+			value = "1";
+		}
+	);
+}
