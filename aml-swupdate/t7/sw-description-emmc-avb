@@ -21,6 +21,10 @@ software =
 				installed-directly = true;
 			},
 			{
+				filename = "u-boot.bin.signed";
+				device = "/dev/bootloader";
+			},
+			{
 				filename = "recovery.img";
 				device = "/dev/recovery";
 				installed-directly = true;
